@@ -41,6 +41,13 @@
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.buttonQuitar = new System.Windows.Forms.Button();
             this.listAlumnos = new System.Windows.Forms.ListView();
+            this.columnHeaderCodigo = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderNombres = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderPractica = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderParcial = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderExamen = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderPromedio = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderNivel = new System.Windows.Forms.ColumnHeader();
             this.labelMejorAlumno = new System.Windows.Forms.Label();
             this.labelPeorAlumno = new System.Windows.Forms.Label();
             this.textBoxMejorAlumno = new System.Windows.Forms.TextBox();
@@ -51,13 +58,6 @@
             this.labelDesaprobados = new System.Windows.Forms.Label();
             this.labelAprobados = new System.Windows.Forms.Label();
             this.labelPromedioClase = new System.Windows.Forms.Label();
-            this.columnHeaderCodigo = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderNombres = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderPractica = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderParcial = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderExamen = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderPromedio = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderNivel = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // labelCodigo
@@ -148,6 +148,7 @@
             this.buttonAgregar.TabIndex = 10;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = true;
+            this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
             // buttonQuitar
             // 
@@ -175,6 +176,34 @@
             this.listAlumnos.TabIndex = 12;
             this.listAlumnos.UseCompatibleStateImageBehavior = false;
             this.listAlumnos.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderCodigo
+            // 
+            this.columnHeaderCodigo.Text = "Codigo";
+            // 
+            // columnHeaderNombres
+            // 
+            this.columnHeaderNombres.Text = "Nombres";
+            // 
+            // columnHeaderPractica
+            // 
+            this.columnHeaderPractica.Text = "Práctica";
+            // 
+            // columnHeaderParcial
+            // 
+            this.columnHeaderParcial.Text = "Parcial";
+            // 
+            // columnHeaderExamen
+            // 
+            this.columnHeaderExamen.Text = "Examen";
+            // 
+            // columnHeaderPromedio
+            // 
+            this.columnHeaderPromedio.Text = "Promedio";
+            // 
+            // columnHeaderNivel
+            // 
+            this.columnHeaderNivel.Text = "Nivel";
             // 
             // labelMejorAlumno
             // 
@@ -256,39 +285,11 @@
             this.labelPromedioClase.TabIndex = 23;
             this.labelPromedioClase.Text = "Promedio Clase:";
             // 
-            // columnHeaderCodigo
-            // 
-            this.columnHeaderCodigo.Text = "Codigo";
-            // 
-            // columnHeaderNombres
-            // 
-            this.columnHeaderNombres.Text = "Nombres";
-            // 
-            // columnHeaderPractica
-            // 
-            this.columnHeaderPractica.Text = "Práctica";
-            // 
-            // columnHeaderParcial
-            // 
-            this.columnHeaderParcial.Text = "Parcial";
-            // 
-            // columnHeaderExamen
-            // 
-            this.columnHeaderExamen.Text = "Examen";
-            // 
-            // columnHeaderPromedio
-            // 
-            this.columnHeaderPromedio.Text = "Promedio";
-            // 
-            // columnHeaderNivel
-            // 
-            this.columnHeaderNivel.Text = "Nivel";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 535);
+            this.ClientSize = new System.Drawing.Size(540, 553);
             this.Controls.Add(this.labelPromedioClase);
             this.Controls.Add(this.labelAprobados);
             this.Controls.Add(this.labelDesaprobados);

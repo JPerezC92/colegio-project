@@ -17,5 +17,17 @@ namespace CollegeProject
             InitializeComponent();
         }
 
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            ListViewItem lista = new ListViewItem("123");
+            lista.SubItems.Add("Nombre");
+            lista.SubItems.Add("Practica");
+            lista.SubItems.Add("Parcial");
+            lista.SubItems.Add("Examen");
+            lista.SubItems.Add("Promedio");
+            lista.SubItems.Add("Nivel");
+            listAlumnos.Items.Add(lista);
+
+        }
     }
 }
