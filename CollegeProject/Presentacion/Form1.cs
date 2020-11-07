@@ -27,14 +27,16 @@ namespace CollegeProject
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
+            this.agregarRegistro();
 
-            alumnoControlador.agregarRegistro(
-                int.Parse(textBoxCodigo.Text),
-                textBoxNombres.Text,
-                float.Parse(textBoxPractica.Text),
-                float.Parse(textBoxParcial.Text),
-                float.Parse(textBoxExamen.Text)
-                );
+
+            this.aniadirRegistros();
+
+            this.aniadirInformacionGeneral();
+        }
+
+        private void aniadirRegistros()
+        {
 
             List<Dictionary<String, String>> registros = alumnoControlador.cargarRegistros();
 
@@ -56,16 +58,28 @@ namespace CollegeProject
                 listAlumnos.Items.Add(listViewAlumnos);
             }
 
+        }
+
+        private void agregarRegistro()
+        {
+            alumnoControlador.agregarRegistro(
+                int.Parse(textBoxCodigo.Text),
+                textBoxNombres.Text,
+                float.Parse(textBoxPractica.Text),
+                float.Parse(textBoxParcial.Text),
+                float.Parse(textBoxExamen.Text)
+        );
+        }
+
+        private void aniadirInformacionGeneral()
+        {
             Dictionary<String, String> informacionGeneral = alumnoControlador.cargarInformacionGeneral();
 
             textBoxMejorAlumno.Text = informacionGeneral["mejorAlumno"];
+            textBoxPeorAlumno.Text = informacionGeneral["peorAlumno"];
             textBoxPromedioClase.Text = informacionGeneral["promedioClase"];
-        }
-
-
-        private void cargarLista()
-        {
-
+            textBoxAprobados.Text = informacionGeneral["aprobados"];
+            textBoxDesaprobados.Text = informacionGeneral["desaprobados"];
         }
     }
 }

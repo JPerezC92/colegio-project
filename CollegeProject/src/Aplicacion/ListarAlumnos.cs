@@ -14,16 +14,14 @@ namespace CollegeProject.src.Aplicacion
         }
         public List<Dictionary<String, String>> ejecutar()
         {
-            List<Dictionary<String, String>> data = new List<Dictionary<String, String>>();
-
             List<Alumno> alumnos = this._repositorio.obtenerTodos();
 
-            foreach (Alumno item in alumnos)
-            {
-                data.Add(item.toDictionary());
-            }
+            Registro registro = new Registro(alumnos);
 
-            return data;
+
+
+
+            return registro.data();
         }
     }
 }

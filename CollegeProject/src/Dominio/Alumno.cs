@@ -38,7 +38,7 @@ namespace CollegeProject.src.Dominio
             }
         }
 
-        public Dictionary<String, String> toDictionary()
+        public Dictionary<String, String> informacion()
         {
             Dictionary<String, String> alumnoData = new Dictionary<String, String>();
 
